@@ -7,5 +7,6 @@ $(document).ready(function () {
     tabItem.removeClass("tab__item--active");
     contentItem.removeClass("content__item--active");
     $(activeContent).addClass("content__item--active");
+    $(this).addClass("tab__item--active");
   });
 });
