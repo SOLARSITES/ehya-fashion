@@ -1,0 +1,167 @@
+.navbar
+  background-color: $light
+  &-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 25px 0 26px
+  &-group
+    display: flex
+    align-items: center
+  &-menu
+    display: flex
+    align-items: center
+    list-style-type: none
+    margin: 0 50px 0 auto
+    padding: 0
+    &__item
+      margin-right: 40px
+      &:last-child
+        margin-right: 0
+    &__link
+      color: $primary
+      text-decoration: none
+      font-weight: 600
+      font-size: 16px
+      line-height: 22px
+  &__button
+    color: $text
+    background-color: $light
+    font-weight: 700
+    font-size: 16px
+    line-height: 22px
+    text-decoration: none
+    border: 2px solid $text
+    border-radius: 8px
+    padding: 11px 22px
+  &__menu
+    &-button
+      display: none
+.logo
+  &__image
+    width: 90px
+    object-fit: cover
+
+// Responsive
+@media (max-width: 1200px)
+  .container
+    max-width: 960px
+@media (max-width: 992px)
+  .container
+    max-width: 700px
+  .navbar
+    &-menu
+      margin-right: 42px
+      &__item
+        margin-right: 20px
+@media (max-width: 768px)
+  body
+    padding-top: 64px
+  .navbar
+    &__container
+      max-width: 650px
+      width: 92%
+    &__mobile
+      position: fixed
+      left: 0
+      top: 0
+      right: 0
+      z-index: 99
+    &-group
+      display: none
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      top: 64px
+      max-height: 330px
+      padding: 15px 0 36px
+      background-color: $light
+      overflow-y: auto
+      scrollbar-width: none
+      scrollbar-color: transparent transparent
+      &::-webkit-scrollbar
+        width: 0
+        height: 0
+      &::-webkit-scrollbar-button
+        background-color: transparent
+      &::-webkit-scrollbar-track
+        background-color: transparent
+      &::-webkit-scrollbar-track-piece
+        background-color: transparent
+      &::-webkit-scrollbar-thumb
+        height: 0
+        background-color: transparent
+        border-radius: 0
+      &::-webkit-scrollbar-corner
+        background-color: transparent
+      &::-webkit-resizer
+        background-color: transparent
+      &--visible
+        display: flex
+        flex-direction: column
+    &-menu
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-right: auto
+      margin-bottom: 25px
+      &__item
+        margin-right: 0
+        margin-bottom: 20px
+        &:last-child
+          margin-bottom: 0
+    &__button
+      padding: 9px 30px
+      text-align: center
+    &__menu
+      &-button
+        display: block
+  .menu
+    &-button
+      background-image: url(../img/menu-button.svg)
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: cover
+      width: 22px
+      height: 18px
+      margin-right: 2px
+      margin-bottom: 2px
+      cursor: pointer
+      z-index: 99
+      &:focus
+        outline: none
+      &--close
+        background-image: url(../img/menu-button-close.svg)
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+        width: 18px
+        height: 18px
+        margin-right: 4px
+        cursor: pointer
+        z-index: 99
+        &:focus
+          outline: none
+@media (max-width: 576px)
+  .navbar
+    &-group
+      max-height: 325px
+@media (max-width: 320px)
+  .navbar
+    &__container
+      max-width: 272px
+    &-group
+      max-width: 304px
+      max-height: 324px
+      top: 10px
+      left: 8px
+      right: 8px
+      padding: 36px 24px
+    &-menu
+      align-items: flex-start
+      margin-left: 0
+      margin-bottom: 20px
+    &__button
+      padding: 8px 9px
+      width: 100%

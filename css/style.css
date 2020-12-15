@@ -42,6 +42,10 @@ button:active, button:hover, button:focus, input:active, input:hover, input:focu
   outline-offset: 0;
 }
 
+.body-locked {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1140px;
   margin: auto;
@@ -384,5 +388,235 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+.navbar {
+  background-color: #ffffff;
+}
+
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0 26px;
+}
+
+.navbar-group {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0 50px 0 auto;
+  padding: 0;
+}
+
+.navbar-menu__item {
+  margin-right: 40px;
+}
+
+.navbar-menu__item:last-child {
+  margin-right: 0;
+}
+
+.navbar-menu__link {
+  color: #183B56;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.navbar__button {
+  color: #1565D8;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  border: 2px solid #1565D8;
+  border-radius: 8px;
+  padding: 11px 22px;
+}
+
+.navbar__menu-button {
+  display: none;
+}
+
+.logo__image {
+  width: 90px;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 700px;
+  }
+  .navbar-menu {
+    margin-right: 42px;
+  }
+  .navbar-menu__item {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 64px;
+  }
+  .navbar__container {
+    max-width: 650px;
+    width: 92%;
+  }
+  .navbar__mobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .navbar-group {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 64px;
+    max-height: 330px;
+    padding: 15px 0 36px;
+    background-color: #ffffff;
+    overflow-y: auto;
+    scrollbar-width: none;
+    scrollbar-color: transparent transparent;
+  }
+  .navbar-group::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .navbar-group::-webkit-scrollbar-button {
+    background-color: transparent;
+  }
+  .navbar-group::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  .navbar-group::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+  .navbar-group::-webkit-scrollbar-thumb {
+    height: 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  .navbar-group::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
+  .navbar-group::-webkit-resizer {
+    background-color: transparent;
+  }
+  .navbar-group--visible {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: auto;
+    margin-bottom: 25px;
+  }
+  .navbar-menu__item {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .navbar-menu__item:last-child {
+    margin-bottom: 0;
+  }
+  .navbar__button {
+    padding: 9px 30px;
+    text-align: center;
+  }
+  .navbar__menu-button {
+    display: block;
+  }
+  .menu-button {
+    background-image: url(../img/menu-button.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 22px;
+    height: 18px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    z-index: 99;
+  }
+  .menu-button:focus {
+    outline: none;
+  }
+  .menu-button--close {
+    background-image: url(../img/menu-button-close.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    cursor: pointer;
+    z-index: 99;
+  }
+  .menu-button--close:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-group {
+    max-height: 325px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar__container {
+    max-width: 272px;
+  }
+  .navbar-group {
+    max-width: 304px;
+    max-height: 324px;
+    top: 10px;
+    left: 8px;
+    right: 8px;
+    padding: 36px 24px;
+  }
+  .navbar-menu {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .navbar__button {
+    padding: 8px 9px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  a:hover {
+    text-decoration: underline;
+  }
+  button:hover {
+    background-color: #526C80;
+  }
+  .navbar__button:hover {
+    color: #FF4040;
+    text-decoration: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
