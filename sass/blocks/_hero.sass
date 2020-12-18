@@ -1,0 +1,186 @@
+.hero
+  &__container
+    background: linear-gradient(270deg, rgba(238, 238, 238, 0.0001) 67.34%, #E8EAE9 100%), url("../img/hero-bg.jpg") no-repeat center center
+    background-color: #E8EAE9
+    background-size: cover
+    border-radius: 8px
+    object-fit: cover
+    padding: 62px 20px 46px 107px
+    max-width: 1280px
+    width: 98%
+  &-wrapper
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  &__tag
+    color: $green
+    font-weight: 600
+    font-size: 14px
+    line-height: 20px
+    text-align: center
+    text-transform: uppercase
+    background-color: rgba(54, 179, 126, 0.1)
+    border-radius: 2000px
+    min-width: 175px
+    min-height: 32px
+    padding: 6px 16px 6px
+    margin-bottom: 23px
+  &__title
+    color: $primary
+    font-family: "hk_groteskbold", sans-serif
+    font-style: normal
+    font-weight: 700
+    font-size: 56px
+    line-height: 68px
+    letter-spacing: 0.2px
+    margin-top: 0
+    margin-bottom: 35px
+    max-width: 425px
+  &__text
+    color: $secondary
+    font-weight: 400
+    font-size: 20px
+    line-height: 36px
+    margin-top: 0
+    margin-bottom: 51px
+    max-width: 650px
+  &__button
+    margin-bottom: 46px
+  &__features
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__pay, &__warranty, &__quality
+    display: flex
+    align-items: center
+    margin-right: 31px
+    &:last-child
+      margin-right: 0
+    &-image
+      margin-top: 2px
+      margin-right: 6px
+    &-link
+      font-family: "hk_groteskmedium", sans-serif
+      color: $primary
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 20px
+      letter-spacing: 0.2px
+      text-decoration: none
+      margin-bottom: 2px
+
+// Responsive
+@media (max-width: 1200px)
+  .hero
+    &__container
+      padding: 62px 20px 46px 67px
+    &__text
+      max-width: 600px
+@media (max-width: 992px)
+  .hero
+    &__container
+      padding: 62px 20px 46px 47px
+      max-width: 952px
+    &__title
+      font-size: 48px
+      line-height: 60px
+    &__text
+      font-size: 18px
+      line-height: 32px
+      max-width: 450px
+    &__pay, &__warranty
+      margin-right: 21px
+@media (max-width: 768px)
+  .hero
+    &__container
+      background: linear-gradient(270deg, rgba(238, 238, 238, 0.0001) 67.34%, #E8EAE9 100%), url("../img/hero-bg.jpg") no-repeat -359px -18px
+      background-color: #E8EAE9
+      padding: 36px 28px 35px 27px
+      max-width: 728px
+    &__tag
+      margin-bottom: 19px
+    &__title
+      margin-bottom: 25px
+    &__text
+      margin-bottom: 36px
+      max-width: 410px
+    &__button
+      margin-bottom: 38px
+@media (max-width: 576px)
+  .hero
+    &__container
+      background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 47.32%, #E8EAE9 65.51%), url("../img/hero-bg.jpg") no-repeat -640px -3px
+      background-color: #DCDBD9
+      padding: 382px 20px 36px 20px
+      border-radius: 0
+      max-width: 100%
+      width: 100%
+    &-wrapper
+      align-items: center
+    &__tag
+      min-width: 196px
+      min-height: 24px
+      padding: 2px 26px 2px
+      margin-bottom: 17px
+    &__title
+      font-size: 32px
+      line-height: 40px
+      text-align: center
+      margin-bottom: 23px
+    &__text
+      font-size: 16px
+      line-height: 28px
+      text-align: center
+      margin-bottom: 24px
+    &__button
+      font-size: 16px
+      line-height: 22px
+      border: 0
+      max-width: 200px
+      width: 95%
+      min-height: 48px
+      padding: 13px 5px
+      margin-bottom: 21px
+    &__features
+      flex-wrap: wrap
+      justify-content: center
+    &__pay, &__warranty, &__quality
+      &-image
+        width: 24px
+        height: 24px
+    &__pay
+      flex-basis: 55%
+      margin-right: 16px
+      &-image
+        margin-top: 1px
+        margin-right: 8px
+    &__warranty
+      margin-left: -2px
+      margin-right: 0
+      &-image
+        margin-top: 1px
+        margin-right: 7px
+    &__quality
+      margin-top: 14px
+      &-image
+        margin-top: 1px
+        margin-right: 7px
+@media (max-width: 480px)
+  .hero
+    &__container
+      background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 47.32%, #E8EAE9 65.51%), url("../img/hero-bg.jpg") no-repeat -680px -3px
+      background-color: #DCDBD9
+@media (max-width: 400px)
+  .hero
+    &__container
+      background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 47.32%, #E8EAE9 65.51%), url("../img/hero-bg.jpg") no-repeat -725px -3px
+      background-color: #DCDBD9
+@media (max-width: 320px)
+  .hero
+    &__container
+      background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 47.32%, #E8EAE9 65.51%), url("../img/hero-bg.jpg") no-repeat -765px -3px
+      background-color: #DCDBD9
+    &__title
+      &-span
+        margin-left: -8px

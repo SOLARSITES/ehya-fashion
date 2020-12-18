@@ -1,18 +1,18 @@
 @font-face
-  font-family: "HK Grotesk"
-  src: url("../fonts/HKGrotesk-Regular.woff") format("woff"), url("../fonts/HKGrotesk-Regular.woff2") format("woff2")
+  font-family: "hk_groteskregular"
+  src: url("../fonts/hkgrotesk-regular.woff") format("woff"), url("../fonts/hkgrotesk-regular.woff2") format("woff2")
   font-weight: 400
   font-style: normal
   font-display: swap
 @font-face
-  font-family: "HK Grotesk"
-  src: url("../fonts/HKGrotesk-Medium.woff") format("woff"), url("../fonts/HKGrotesk-Medium.woff2") format("woff2")
+  font-family: "hk_groteskmedium"
+  src: url("../fonts/hkgrotesk-medium.woff") format("woff"), url("../fonts/hkgrotesk-medium.woff2") format("woff2")
   font-weight: 500
   font-style: normal
   font-display: swap
 @font-face
-  font-family: "HK Grotesk"
-  src: url("../fonts/HKGrotesk-Bold.woff") format("woff"), url("../fonts/HKGrotesk-Bold.woff2") format("woff2")
+  font-family: "hk_groteskbold"
+  src: url("../fonts/hkgrotesk-bold.woff") format("woff"), url("../fonts/hkgrotesk-bold.woff2") format("woff2")
   font-weight: 700
   font-style: normal
   font-display: swap
@@ -25,6 +25,7 @@ body
   background-color: $light
 img
   max-width: 100%
+  object-fit: cover
 button, input, textarea
   &:active, &:hover, &:focus
     outline: 0
@@ -35,3 +36,18 @@ button, input, textarea
 .container
   max-width: 1140px
   margin: auto
+.button
+  display: block
+  color: $light
+  background-color: $primary
+  font-weight: 700
+  font-size: 18px
+  line-height: 25px
+  text-align: center
+  text-decoration: none
+  border: 3px solid transparent
+  border-radius: 8px
+  min-width: 259px
+  min-height: 55px
+  padding: 12px 18px
+  cursor: pointer

@@ -1,22 +1,22 @@
 @font-face {
-  font-family: "HK Grotesk";
-  src: url("../fonts/HKGrotesk-Regular.woff") format("woff"), url("../fonts/HKGrotesk-Regular.woff2") format("woff2");
+  font-family: "hk_groteskregular";
+  src: url("../fonts/hkgrotesk-regular.woff") format("woff"), url("../fonts/hkgrotesk-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "HK Grotesk";
-  src: url("../fonts/HKGrotesk-Medium.woff") format("woff"), url("../fonts/HKGrotesk-Medium.woff2") format("woff2");
+  font-family: "hk_groteskmedium";
+  src: url("../fonts/hkgrotesk-medium.woff") format("woff"), url("../fonts/hkgrotesk-medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "HK Grotesk";
-  src: url("../fonts/HKGrotesk-Bold.woff") format("woff"), url("../fonts/HKGrotesk-Bold.woff2") format("woff2");
+  font-family: "hk_groteskbold";
+  src: url("../fonts/hkgrotesk-bold.woff") format("woff"), url("../fonts/hkgrotesk-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -35,6 +35,7 @@ body {
 
 img {
   max-width: 100%;
+  object-fit: cover;
 }
 
 button:active, button:hover, button:focus, input:active, input:hover, input:focus, textarea:active, textarea:hover, textarea:focus {
@@ -49,6 +50,23 @@ button:active, button:hover, button:focus, input:active, input:hover, input:focu
 .container {
   max-width: 1140px;
   margin: auto;
+}
+
+.button {
+  display: block;
+  color: #ffffff;
+  background-color: #183B56;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  min-width: 259px;
+  min-height: 55px;
+  padding: 12px 18px;
+  cursor: pointer;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -398,7 +416,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 0 26px;
+  padding: 25px 0 61px;
 }
 
 .navbar-group {
@@ -453,7 +471,10 @@ template {
 
 @media (max-width: 1200px) {
   .container {
-    max-width: 960px;
+    max-width: 955px;
+  }
+  .navbar-wrapper {
+    padding: 25px 0 45px;
   }
 }
 
@@ -461,17 +482,17 @@ template {
   .container {
     max-width: 700px;
   }
-  .navbar-menu {
+  .container-menu {
     margin-right: 42px;
   }
-  .navbar-menu__item {
+  .container-menu__item {
     margin-right: 20px;
   }
 }
 
 @media (max-width: 768px) {
   body {
-    padding-top: 64px;
+    padding-top: 101px;
   }
   .navbar__container {
     max-width: 650px;
@@ -579,6 +600,12 @@ template {
 }
 
 @media (max-width: 576px) {
+  body {
+    padding-top: 87px;
+  }
+  .navbar-wrapper {
+    padding: 18px 0 38px;
+  }
   .navbar-group {
     max-height: 325px;
   }
@@ -590,7 +617,7 @@ template {
   }
   .navbar-group {
     max-width: 304px;
-    max-height: 324px;
+    max-height: 322px;
     top: 10px;
     left: 8px;
     right: 8px;
@@ -602,8 +629,247 @@ template {
     margin-bottom: 20px;
   }
   .navbar__button {
-    padding: 8px 9px;
+    padding: 7px 9px;
     width: 100%;
+  }
+}
+
+.hero__container {
+  background: linear-gradient(270deg, rgba(238, 238, 238, 0.0001) 67.34%, #E8EAE9 100%), url("../img/hero-bg.jpg") no-repeat center center;
+  background-color: #E8EAE9;
+  background-size: cover;
+  border-radius: 8px;
+  object-fit: cover;
+  padding: 62px 20px 46px 107px;
+  max-width: 1280px;
+  width: 98%;
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero__tag {
+  color: #36B37E;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(54, 179, 126, 0.1);
+  border-radius: 2000px;
+  min-width: 175px;
+  min-height: 32px;
+  padding: 6px 16px 6px;
+  margin-bottom: 23px;
+}
+
+.hero__title {
+  color: #183B56;
+  font-family: "hk_groteskbold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 68px;
+  letter-spacing: 0.2px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  max-width: 425px;
+}
+
+.hero__text {
+  color: #5A7184;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  margin-top: 0;
+  margin-bottom: 51px;
+  max-width: 650px;
+}
+
+.hero__button {
+  margin-bottom: 46px;
+}
+
+.hero__features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__pay, .hero__warranty, .hero__quality {
+  display: flex;
+  align-items: center;
+  margin-right: 31px;
+}
+
+.hero__pay:last-child, .hero__warranty:last-child, .hero__quality:last-child {
+  margin-right: 0;
+}
+
+.hero__pay-image, .hero__warranty-image, .hero__quality-image {
+  margin-top: 2px;
+  margin-right: 6px;
+}
+
+.hero__pay-link, .hero__warranty-link, .hero__quality-link {
+  font-family: "hk_groteskmedium", sans-serif;
+  color: #183B56;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  margin-bottom: 2px;
+}
+
+@media (max-width: 1200px) {
+  .hero__container {
+    padding: 62px 20px 46px 67px;
+  }
+  .hero__text {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero__container {
+    padding: 62px 20px 46px 47px;
+    max-width: 952px;
+  }
+  .hero__title {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .hero__text {
+    font-size: 18px;
+    line-height: 32px;
+    max-width: 450px;
+  }
+  .hero__pay, .hero__warranty {
+    margin-right: 21px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__container {
+    background: linear-gradient(270deg, rgba(238, 238, 238, 0.0001) 67.34%, #E8EAE9 100%), url("../img/hero-bg.jpg") no-repeat -359px -18px;
+    background-color: #E8EAE9;
+    padding: 36px 28px 35px 27px;
+    max-width: 728px;
+  }
+  .hero__tag {
+    margin-bottom: 19px;
+  }
+  .hero__title {
+    margin-bottom: 25px;
+  }
+  .hero__text {
+    margin-bottom: 36px;
+    max-width: 410px;
+  }
+  .hero__button {
+    margin-bottom: 38px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__container {
+    background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 47.32%, #E8EAE9 65.51%), url("../img/hero-bg.jpg") no-repeat -640px -3px;
+    background-color: #DCDBD9;
+    padding: 382px 20px 36px 20px;
+    border-radius: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .hero-wrapper {
+    align-items: center;
+  }
+  .hero__tag {
+    min-width: 196px;
+    min-height: 24px;
+    padding: 2px 26px 2px;
+    margin-bottom: 17px;
+  }
+  .hero__title {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+  .hero__text {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .hero__button {
+    font-size: 16px;
+    line-height: 22px;
+    border: 0;
+    max-width: 200px;
+    width: 95%;
+    min-height: 48px;
+    padding: 13px 5px;
+    margin-bottom: 21px;
+  }
+  .hero__features {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero__pay-image, .hero__warranty-image, .hero__quality-image {
+    width: 24px;
+    height: 24px;
+  }
+  .hero__pay {
+    flex-basis: 55%;
+    margin-right: 16px;
+  }
+  .hero__pay-image {
+    margin-top: 1px;
+    margin-right: 8px;
+  }
+  .hero__warranty {
+    margin-left: -2px;
+    margin-right: 0;
+  }
+  .hero__warranty-image {
+    margin-top: 1px;
+    margin-right: 7px;
+  }
+  .hero__quality {
+    margin-top: 14px;
+  }
+  .hero__quality-image {
+    margin-top: 1px;
+    margin-right: 7px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__container {
+    background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 47.32%, #E8EAE9 65.51%), url("../img/hero-bg.jpg") no-repeat -680px -3px;
+    background-color: #DCDBD9;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero__container {
+    background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 47.32%, #E8EAE9 65.51%), url("../img/hero-bg.jpg") no-repeat -725px -3px;
+    background-color: #DCDBD9;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero__container {
+    background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 47.32%, #E8EAE9 65.51%), url("../img/hero-bg.jpg") no-repeat -765px -3px;
+    background-color: #DCDBD9;
+  }
+  .hero__title-span {
+    margin-left: -8px;
   }
 }
 
@@ -617,6 +883,12 @@ template {
   .navbar__button:hover {
     color: #FF4040;
     text-decoration: none;
+  }
+  .hero__button:hover {
+    color: #FF4040;
+    background-color: #E8EAE9;
+    text-decoration: none;
+    border: 3px solid #183B56;
   }
 }
 /*# sourceMappingURL=style.css.map */
