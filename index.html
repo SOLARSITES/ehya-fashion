@@ -21,7 +21,7 @@
           <a class="logo navbar__logo" href="index.html">
             <img class="logo__image" src="img/logo.svg" alt="Logo: Ehya Fashion" />
           </a>
-          <div class="navbar-group">
+          <div class="navbar-group navbar-group__mod">
             <ul class="navbar-menu">
               <li class="navbar-menu__item">
                 <a class="navbar-menu__link" href="#">Главная</a>
@@ -119,8 +119,9 @@
             <h2 class="collection__title">Новая зимняя коллекция</h2>
             <p class="collection__text">
               Сейчас зимний сезон. Вы можете увидеть больше из этой коллекции, нажав кнопку
-              ниже. Успейте купить, пока коллекция есть в наличии. Используйте код EHYA20,
-              чтобы получить 20%&nbsp;скидку.
+              ниже. Успейте купить, пока коллекция есть в наличии. Используйте код
+              <span class="collection__text-mod">EHYA20, чтобы получить</span>
+              20%&nbsp;скидку.
             </p>
             <a class="collection__link" href="#">
               <span class="collection__link-text">Посмотреть коллекцию</span>
@@ -137,8 +138,432 @@
       </div>
       <!-- /.container -->
     </section>
+    <section class="trends">
+      <div class="container trends__container">
+        <div class="trends-wrapper">
+          <div class="trends-header">
+            <h2 class="trends__title">Тренды</h2>
+            <ul class="trends-menu">
+              <li
+                data-target="#new"
+                class="trends-menu__item trends-menu__item--new trends-menu__item--active"
+              >
+                Новинки
+              </li>
+              <li data-target="#best" class="trends-menu__item trends-menu__item--best">
+                Лучшее
+              </li>
+              <li data-target="#soon" class="trends-menu__item trends-menu__item--soon">
+                Скоро
+              </li>
+            </ul>
+            <!-- /.trends-menu -->
+          </div>
+          <!-- /.trends-header -->
+          <div id="new" class="trends-content trends-content--active">
+            <div class="card trends__card trends__card--new-01">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-1.jpg"
+                  alt="Тренды: Minimalist Style"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title">Minimalist Style</h3>
+              <div class="card__purchase">
+                <span class="card__price">$25.7</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--new-02">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-2.jpg"
+                  alt="Тренды: Luxury Gown"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title">Luxury <span class="spacing">Gown</span></h3>
+              <div class="card__purchase card__purchase--new-02">
+                <span class="card__price">$30.6</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--new-03">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-3.jpg"
+                  alt="Тренды: Full Coloristy"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--new-03">
+                <span class="spacing">Full Coloristy</span>
+              </h3>
+              <div class="card__purchase">
+                <span class="card__price">$25.7</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--new-04">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-4.jpg"
+                  alt="Тренды: Pinky Winky"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--new-04">Pinky Winky</h3>
+              <div class="card__purchase card__purchase--new-04">
+                <span class="card__price">$109</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--new-05">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-5.jpg"
+                  alt="Тренды: Holiday Vibes"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--new-05">Holiday Vibes</h3>
+              <div class="card__purchase">
+                <span class="card__price">$51.2</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--new-06">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-6.jpg"
+                  alt="Тренды: Swaggie Shaggy"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--new-06">
+                <span class="spacing">Swaggie Shaggy</span>
+              </h3>
+              <div class="card__purchase card__purchase--new-06">
+                <span class="card__price">$81.3</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--new-07">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-7.jpg"
+                  alt="Тренды: Red Formal"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--new-07">Red Formal</h3>
+              <div class="card__purchase">
+                <span class="card__price">$66.8</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card-next trends__card-next">
+              <a class="card-next__link" href="#">
+                <img
+                  class="card-next__plus"
+                  src="img/plus.svg"
+                  alt="Смотреть больше коллекций"
+                />
+                <span class="card-next__more">Смотреть больше коллекций</span>
+              </a>
+            </div>
+            <!-- /.card-next -->
+          </div>
+          <!-- /#new .trends-content -->
+          <div id="best" class="trends-content">
+            <div class="card trends__card trends__card--best-01">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-6.jpg"
+                  alt="Тренды: Swaggie Shaggy"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title"><span class="spacing">Swaggie Shaggy</span></h3>
+              <div class="card__purchase">
+                <span class="card__price">$81.3</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--best-02">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-4.jpg"
+                  alt="Тренды: Pinky Winky"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title">Pinky Winky</h3>
+              <div class="card__purchase card__purchase--best-02">
+                <span class="card__price">$109</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--best-03">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-2.jpg"
+                  alt="Тренды: Luxury Gown"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--best-03">
+                Luxury <span class="spacing">Gown</span>
+              </h3>
+              <div class="card__purchase">
+                <span class="card__price">$30.6</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--best-04">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-1.jpg"
+                  alt="Тренды: Minimalist Style"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--best-04">Minimalist Style</h3>
+              <div class="card__purchase card__purchase--best-04">
+                <span class="card__price">$25.7</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--best-05">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-7.jpg"
+                  alt="Тренды: Red Formal"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--best-05">Red Formal</h3>
+              <div class="card__purchase">
+                <span class="card__price">$66.8</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--best-06">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-3.jpg"
+                  alt="Тренды: Full Coloristy"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--best-06">
+                <span class="spacing">Full Coloristy</span>
+              </h3>
+              <div class="card__purchase card__purchase--best-06">
+                <span class="card__price">$25.7</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card-next trends__card-next">
+              <a class="card-next__link" href="#">
+                <img
+                  class="card-next__plus"
+                  src="img/plus.svg"
+                  alt="Смотреть больше коллекций"
+                />
+                <span class="card-next__more">Смотреть больше коллекций</span>
+              </a>
+            </div>
+            <!-- /.card-next -->
+          </div>
+          <!-- /#best .trends-content -->
+          <div id="soon" class="trends-content">
+            <div class="card trends__card trends__card--soon-01">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-7.jpg"
+                  alt="Тренды: Red Formal"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title">Red Formal</h3>
+              <div class="card__purchase">
+                <span class="card__price">$66.8</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--soon-02">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-3.jpg"
+                  alt="Тренды: Full Coloristy"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title"><span class="spacing">Full Coloristy</span></h3>
+              <div class="card__purchase card__purchase--soon-02">
+                <span class="card__price">$25.7</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--soon-03">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-1.jpg"
+                  alt="Тренды: Minimalist Style"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--soon-03">Minimalist Style</h3>
+              <div class="card__purchase">
+                <span class="card__price">$25.7</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--soon-04">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-6.jpg"
+                  alt="Тренды: Swaggie Shaggy"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--soon-04">
+                <span class="spacing">Swaggie Shaggy</span>
+              </h3>
+              <div class="card__purchase card__purchase--soon-04">
+                <span class="card__price">$81.3</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card trends__card trends__card--soon-05">
+              <div class="card__frame">
+                <img
+                  class="card__image"
+                  src="img/trends/trends-2.jpg"
+                  alt="Тренды: Luxury Gown"
+                />
+              </div>
+              <!-- /.card__frame -->
+              <h3 class="card__title card__title--soon-05">
+                Luxury <span class="spacing">Gown</span>
+              </h3>
+              <div class="card__purchase">
+                <span class="card__price">$30.6</span>
+                <a class="card__link" href="#">
+                  <img class="card__icon" src="img/cart.svg" alt="Положить в корзину" />
+                </a>
+              </div>
+              <!-- /.card__purchase -->
+            </div>
+            <!-- /.card .trends__card -->
+            <div class="card-next trends__card-next">
+              <a class="card-next__link" href="#">
+                <img
+                  class="card-next__plus"
+                  src="img/plus.svg"
+                  alt="Смотреть больше коллекций"
+                />
+                <span class="card-next__more">Смотреть больше коллекций</span>
+              </a>
+            </div>
+            <!-- /.card-next -->
+          </div>
+          <!-- /#soon .trends-content -->
+        </div>
+        <!-- /.trends-wrapper -->
+      </div>
+      <!-- /.container -->
+    </section>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
