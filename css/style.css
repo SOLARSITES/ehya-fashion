@@ -1848,6 +1848,163 @@ template {
   }
 }
 
+.thankyou__container {
+  background: linear-gradient(270deg, rgba(238, 238, 238, 0.0001) 67.34%, #E8EAE9 100%);
+  background-color: #E8EAE9;
+  border-radius: 8px;
+  padding: 62px 20px 62px 107px;
+  max-width: 1280px;
+  width: 98%;
+}
+
+.thankyou-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.thankyou__tag {
+  color: #36B37E;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(54, 179, 126, 0.1);
+  border-radius: 2000px;
+  min-width: 104px;
+  min-height: 32px;
+  padding: 6px 10px 6px;
+  margin-bottom: 35px;
+}
+
+.thankyou__title {
+  color: #183B56;
+  font-family: "hk_groteskbold", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: 0.2px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.thankyou__text {
+  color: #5A7184;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34px;
+  margin-top: 0;
+  margin-bottom: 65px;
+}
+
+.thankyou__team {
+  color: #5A7184;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 65px;
+}
+
+.thankyou__button {
+  font-size: 17px;
+  line-height: 24px;
+  min-width: 160px;
+  padding: 12px 12px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1200px) {
+  .thankyou__container {
+    padding: 62px 20px 62px 67px;
+  }
+}
+
+@media (max-width: 992px) {
+  .thankyou__container {
+    padding: 62px 20px 62px 47px;
+    max-width: 952px;
+  }
+}
+
+@media (max-width: 768px) {
+  .thankyou__container {
+    padding: 55px 30px 55px 37px;
+    max-width: 728px;
+  }
+  .thankyou__tag {
+    margin-bottom: 30px;
+  }
+  .thankyou__title {
+    font-size: 33px;
+    line-height: 40px;
+  }
+  .thankyou__text {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 57px;
+  }
+  .thankyou__team {
+    font-size: 16px;
+    margin-bottom: 57px;
+  }
+}
+
+@media (max-width: 576px) {
+  .thankyou__container {
+    background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 47.32%, #E8EAE9 65.51%);
+    background-color: #DCDBD9;
+    padding: 45px 25px 50px 25px;
+    border-radius: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .thankyou-wrapper {
+    align-items: center;
+  }
+  .thankyou__tag {
+    min-width: 104px;
+    min-height: 24px;
+    padding: 2px 10px 2px;
+    margin-bottom: 26px;
+  }
+  .thankyou__title {
+    font-size: 32px;
+    line-height: 35px;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+  .thankyou__text {
+    font-size: 16px;
+    line-height: 25x;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .thankyou__team {
+    font-size: 16px;
+    line-height: 25x;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .thankyou__button {
+    font-size: 16px;
+    line-height: 22px;
+    border: 0;
+    max-width: 180px;
+    width: 95%;
+    min-height: 48px;
+    padding: 13px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thankyou__container {
+    padding: 45px 16px 50px 16px;
+  }
+}
+
 .modal__overlay {
   position: fixed;
   left: 0;
@@ -2041,6 +2198,12 @@ template {
     text-decoration: none;
   }
   .hero__button:hover {
+    color: #FF4040;
+    background-color: #E8EAE9;
+    text-decoration: none;
+    border: 3px solid #183B56;
+  }
+  .thankyou__button:hover {
     color: #FF4040;
     background-color: #E8EAE9;
     text-decoration: none;
