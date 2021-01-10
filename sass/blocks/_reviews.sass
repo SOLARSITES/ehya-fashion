@@ -1,0 +1,121 @@
+.reviews
+  &__container
+    padding: 0 0 80px
+    max-width: 100%
+  &-title
+    display: none
+    color: $primary
+    font-family: "hk_groteskbold", sans-serif
+    font-style: normal
+    font-weight: 700
+    font-size: 48px
+    line-height: 60px
+    letter-spacing: 0.2px
+    text-align: center
+    margin-top: 0
+    margin-bottom: 50px
+  &-slider
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-left: 1px
+    max-width: 800px
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+    &__quote
+      margin-bottom: 33px
+    &__text
+      color: $primary
+      font-family: "hk_groteskregular", sans-serif
+      font-style: normal
+      font-weight: 400
+      font-size: 20px
+      line-height: 42px
+      text-align: center
+      letter-spacing: 0.133333px
+      margin-top: 0
+      margin-bottom: 28px
+    &__hero
+      color: $primary
+      font-family: "hk_groteskbold", sans-serif
+      font-style: normal
+      font-weight: 700
+      font-size: 20px
+      line-height: 24px
+      text-align: center
+      letter-spacing: 0.2px
+      margin-top: 0
+      margin-bottom: 0
+    &__pagination
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-top: 41px
+    &__bullet
+      background-image: url(../img/slides/reviews-bullet.svg)
+      width: 5px
+      height: 5px
+      background-repeat: no-repeat
+      background-position: center center
+      background-color: transparent
+      padding: 8px
+      margin-right: 5px
+      cursor: pointer
+      &:last-child
+        margin-right: 0
+      &--active
+        background-image: url(../img/slides/reviews-bullet-active.svg)
+
+// Responsive
+@media (max-width: 992px)
+  .reviews
+    &-slider
+      max-width: 695px
+@media (max-width: 768px)
+  .reviews
+    &-slider
+      padding-right: 3px
+      max-width: 630px
+      &__quote
+        margin-bottom: 37px
+      &__text
+        &-none-02
+          display: none
+      &__pagination
+        margin-top: 21px
+@media (max-width: 767px)
+  .reviews
+    &-slider
+      padding-left: 0
+      padding-right: 0
+      max-width: 527px
+@media (max-width: 576px)
+  .reviews
+    &-slider
+      max-width: 280px
+      &__quote
+        width: 70px
+        height: 62px
+        margin-bottom: 20px
+      &__text
+        font-size: 18px
+        line-height: 36px
+        letter-spacing: 0.12px
+        margin-bottom: 24px
+        &-none-01
+          display: none
+      &__hero
+        margin-left: -5px
+        &-mod-01
+          display: block
+          margin-left: -5px
+        &-mod-02
+          display: block
+          margin-left: 6px
+        &-mod-03
+          display: block
+          margin-left: -4px
+      &__pagination
+        margin-top: 20px

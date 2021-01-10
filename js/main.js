@@ -99,4 +99,41 @@ $(document).ready(function () {
   });
 
   $(`[type="tel"]`).mask("+7 (000) 000-00-00");
+
+  var reviewsSlider = new Swiper(".reviews-slider", {
+    on: {
+      init() {
+        this.el.addEventListener("mouseenter", () => {
+          this.autoplay.stop();
+        });
+
+        // this.el.addEventListener("mouseleave", () => {
+        //   this.autoplay.start();
+        // });
+      },
+    },
+
+    initialSlide: 1,
+
+    // autoplay: {
+    //   delay: 7000,
+    //   disableOnInteraction: false,
+    // },
+
+    loop: true,
+
+    pagination: {
+      el: ".reviews-slider__pagination",
+      bulletClass: "reviews-slider__bullet",
+      bulletActiveClass: "reviews-slider__bullet--active",
+      clickable: true,
+    },
+
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+
+    speed: 750,
+  });
 });

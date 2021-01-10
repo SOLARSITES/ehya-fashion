@@ -1,6 +1,6 @@
 .trends
   &__container
-    padding: 0 0 95px
+    padding: 0 0 106px
     max-width: 1135px
   &-header
     display: flex
@@ -135,6 +135,8 @@
 // Responsive
 @media (max-width: 1200px)
   .trends
+    &__container
+      padding: 0 0 75px
     &-header
       padding: 0 49px 0
     &-content
@@ -176,6 +178,8 @@
         height: 404px
 @media (max-width: 992px)
   .trends
+    &__container
+      padding: 0 0 45px
     &-header
       padding: 0 67px 0
     &-content
@@ -243,6 +247,8 @@
         height: 419px
 @media (max-width: 768px)
   .trends
+    &__container
+      padding: 0 0 43px
     &-wrapper
       padding-right: 2px
     &-header
@@ -250,18 +256,18 @@
       padding: 0 0 0
       margin-bottom: 56px
     &__title
-      margin-bottom: 33px
+      margin-bottom: 32px
     &-menu
       margin: 0 -11px 0 0
     &-content
       &--active
         margin-left: calc((100% - ((281px * 2) + 47px)) / 2)
     &__card
-      margin-right: 46px
+      margin-right: 48px
       margin-bottom: 47px
   .card
     &__frame
-      width: 281px
+      width: 280px
       height: 350px
     &__image
       height: 107%
@@ -271,16 +277,21 @@
       max-width: 260px
       &--new-02, &--new-04, &--new-06
         margin-left: 11px
+        max-width: 259px
       &--best-02, &--best-04, &--best-06
         margin-left: 11px
+        max-width: 259px
       &--soon-02, &--soon-04
         margin-left: 11px
+        max-width: 259px
     &-next
-      padding: 15px 28px 15px 30px
-      width: 281px
+      padding: 15px 29px 15px 29px
+      width: 280px
       height: 350px
       &__link
         height: 350px
+      &__more
+        margin-left: 2px
 @media (max-width: 767px)
   .trends
     &-wrapper
@@ -318,6 +329,8 @@
       height: 340px
       &__link
         height: 340px
+      &__more
+        margin-left: 1px
 @media (max-width: 750px)
   .trends
     &-content
@@ -349,9 +362,9 @@
 @media (max-width: 576px)
   .trends
     &__container
-      padding: 0 0 24px
+      padding: 0 0 38px
     &-header
-      margin-bottom: 35px
+      margin-bottom: 36px
     &__title
       font-size: 28px
       line-height: 36px
@@ -362,7 +375,7 @@
         font-size: 16px
         line-height: 22px
         &--new
-          margin-right: 8px
+          margin-right: 9px
           width: 83px
         &--best
           margin-right: 5px
@@ -382,7 +395,7 @@
     &__frame
       margin-bottom: 13px
       width: 140px
-      height: 171px
+      height: 170px
     &__image
       height: 110%
     &__title
@@ -417,8 +430,8 @@
   .card
     &__title
       &--new-03, &--new-04, &--new-05, &--new-06, &--new-07
-        margin: -1px 0 3px 0
+        margin: 0 0 3px 0
       &--best-03, &--best-04, &--best-05, &--best-06
-        margin: -1px 0 3px 0
+        margin: 0 0 3px 0
       &--soon-03, &--soon-04, &--soon-05
-        margin: -1px 0 3px 0
+        margin: 0 0 3px 0

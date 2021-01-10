@@ -34,6 +34,8 @@
     padding: 0
     &__item
       margin-right: 40px
+      &:first-child
+        margin-right: 43px
       &:last-child
         margin-right: 0
     &__link
@@ -80,6 +82,8 @@
       margin-right: 42px
       &__item
         margin-right: 20px
+        &:first-child
+          margin-right: 20px
 @media (max-width: 768px)
   body
     padding-top: 101px
@@ -135,6 +139,8 @@
       &__item
         margin-right: 0
         margin-bottom: 20px
+        &:first-child
+          margin-right: 0
         &:last-child
           margin-bottom: 0
     &__button
@@ -143,6 +149,8 @@
     &__menu
       &-button
         display: block
+        margin-right: 2px
+        margin-bottom: 3px
   .menu
     &-button
       background-image: url(../img/menu-button.svg)
@@ -151,8 +159,6 @@
       background-size: cover
       width: 22px
       height: 18px
-      margin-right: 2px
-      margin-bottom: 2px
       cursor: pointer
       z-index: 110
       &:focus
@@ -174,7 +180,7 @@
     padding-top: 87px
   .navbar
     &-wrapper
-      padding: 18px 0 38px
+      padding: 18px 0 39px
     &-group
       max-height: 325px
 @media (max-width: 320px)
@@ -195,3 +201,11 @@
     &__button
       padding: 7px 9px
       width: 100%
+    &__menu
+      &-button
+        margin-right: 1px
+  .menu
+    &-button
+      &--close
+        margin-right: 4px
+        margin-bottom: 0
