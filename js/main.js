@@ -136,4 +136,75 @@ $(document).ready(function () {
 
     speed: 750,
   });
+
+  var storiesSlider = new Swiper(".stories-slider", {
+    on: {
+      init() {
+        this.el.addEventListener("mouseenter", () => {
+          this.autoplay.stop();
+        });
+
+        // this.el.addEventListener("mouseleave", () => {
+        //   this.autoplay.start();
+        // });
+      },
+    },
+
+    // autoplay: {
+    //   delay: 7000,
+    //   disableOnInteraction: false,
+    // },
+
+    loop: true,
+
+    navigation: {
+      prevEl: ".stories__button--prev",
+      nextEl: ".stories__button--next",
+    },
+
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false,
+    },
+
+    speed: 750,
+  });
+
+  var sliderButtonPrev = document.querySelector(".stories__button--prev");
+  sliderButtonPrev.addEventListener("click", function () {
+    document
+      .querySelector(".stories__button--prev")
+      .classList.toggle("stories__button--prev-active");
+    document
+      .querySelector(".stories__button--next")
+      .classList.toggle("stories__button--next-active");
+  });
+
+  var sliderButtonNext = document.querySelector(".stories__button--next");
+  sliderButtonNext.addEventListener("click", function () {
+    document
+      .querySelector(".stories__button--next")
+      .classList.toggle("stories__button--next-active");
+    document
+      .querySelector(".stories__button--prev")
+      .classList.toggle("stories__button--prev-active");
+  });
+
+  $.preloadImages = function () {
+    for (var i = 0; i < arguments.length; i++) {
+      $("<img>").attr("src", arguments[i]);
+    }
+  };
+  $.preloadImages(
+    "img/slides/stories-button-prev.svg",
+    "img/slides/stories-button-prev-active.svg",
+    "img/slides/stories-button-prev-hover.svg",
+    "img/slides/stories-button-prev-mobile.svg",
+    "img/slides/stories-button-prev-active-mobile.svg",
+    "img/slides/stories-button-next.svg",
+    "img/slides/stories-button-next-active.svg",
+    "img/slides/stories-button-next-hover.svg",
+    "img/slides/stories-button-next-mobile.svg",
+    "img/slides/stories-button-next-active-mobile.svg"
+  );
 });
