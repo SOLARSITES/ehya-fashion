@@ -29,7 +29,7 @@
     margin-bottom: 23px
   &__title
     color: $primary
-    font-family: "hk_groteskbold", sans-serif
+    font-family: "HK Grotesk", sans-serif
     font-style: normal
     font-weight: 700
     font-size: 48px
@@ -65,17 +65,25 @@
       width: 54px
       height: 56px
       background-image: url(../img/slides/stories-button-prev.svg)
+      background-repeat: no-repeat
+      background-position: center center
       transition: all .5s ease
       &-active
         background-image: url(../img/slides/stories-button-prev-active.svg)
+        background-repeat: no-repeat
+        background-position: center center
         transition: all .5s ease
     &--next
       width: 56px
       height: 56px
       background-image: url(../img/slides/stories-button-next-active.svg)
+      background-repeat: no-repeat
+      background-position: center center
       transition: all .5s ease
       &-active
         background-image: url(../img/slides/stories-button-next.svg)
+        background-repeat: no-repeat
+        background-position: center center
         transition: all .5s ease
   &-slider
     margin: 0 0 0 auto
@@ -117,7 +125,7 @@
       min-height: 178px
     &__title
       color: $primary
-      font-family: "hk_groteskmedium", sans-serif
+      font-family: "HK Grotesk", sans-serif
       font-style: normal
       font-weight: 500
       font-size: 22px
@@ -149,6 +157,7 @@
 @media (max-width: 1150px)
   .stories
     &__container
+      padding: 0 0 125px
       max-width: 1050px
     &__hero
       max-width: 360px
@@ -179,6 +188,8 @@
         margin-top: 0
 @media (max-width: 992px)
   .stories
+    &__container
+      padding: 0 0 105px
     &-wrapper
       padding: 90px 0 0
     &__hero
@@ -192,6 +203,7 @@
 @media (max-width: 768px)
   .stories
     &__container
+      padding: 0 0 80px
       max-width: 728px
     &-wrapper
       padding: 79px 2px 0 0

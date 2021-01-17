@@ -48,7 +48,7 @@ try {
     $mail->setFrom('revelatio@gmail.com', 'Revelatio'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('glo.mail@protonmail.com');
+    $mail->addAddress('glo.mail@yandex.ru');
 
 // Отправка сообщения
 $mail->isHTML(true);

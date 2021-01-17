@@ -11,8 +11,8 @@ $(document).ready(function () {
       !$(".menu-button,.navbar-group").is(e.target) &&
       $(".navbar-group").has(e.target).length === 0
     ) {
-      $(".navbar-overlay").removeClass("navbar-overlay--visible");
       $(".menu-button").removeClass("menu-button--close");
+      $(".navbar-overlay").removeClass("navbar-overlay--visible");
       $(".navbar-group").removeClass("navbar-group--visible");
     }
   });
@@ -57,7 +57,8 @@ $(document).ready(function () {
       !$(".modal__close,.modal__dialog").is(e.target) &&
       $(".modal__dialog").has(e.target).length === 0
     ) {
-      closeModal(e);
+      $(".modal__overlay").removeClass("modal__overlay--visible");
+      $(".modal__dialog").removeClass("modal__dialog--visible");
     }
   });
 
@@ -84,7 +85,7 @@ $(document).ready(function () {
         },
         phone: {
           required: "Пожалуйста, укажите Ваш телефон!",
-          minlength: "Телефон должен быть в формате +7 (xxx) xxx-xx-xx",
+          minlength: "Укажите телефон в формате +7 (xxx) xxx-xx-xx",
         },
         email: {
           required: "Пожалуйста, укажите Ваш E-mail!",
@@ -92,7 +93,7 @@ $(document).ready(function () {
         },
         newsletter_email: {
           required: "Пожалуйста, укажите Ваш E-mail!",
-          email: "E-mail должен быть в формате name@domain.com",
+          email: "Укажите E-mail в формате name@domain.com",
         },
       },
     });

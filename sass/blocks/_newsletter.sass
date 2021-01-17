@@ -1,0 +1,191 @@
+.newsletter
+  padding: 95px 0 100px 0
+  background-image: url(../img/newsletter-bg.jpg)
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  &-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    transform: translateX(-31px)
+    margin: auto
+    max-width: 1077px
+  &__appeal
+    max-width: 440px
+  &__title
+    color: $light
+    font-family: "HK Grotesk", sans-serif
+    font-style: normal
+    font-weight: 700
+    font-size: 48px
+    line-height: 60px
+    letter-spacing: 0.2px
+    margin-top: 0
+    margin-bottom: 19px
+  &__text
+    color: $light
+    font-weight: 400
+    font-size: 18px
+    line-height: 32px
+    margin-top: 0
+    margin-bottom: 0
+    &-mod-01, &-mod-03
+      display: block
+.subscribe
+  position: relative
+  margin-top: 2px
+  &__validation
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+  &__input
+    background-image: url(../img/mail.svg)
+    background-repeat: no-repeat
+    background-position: 19px 22px
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    border: 1px solid #C3CAD9
+    border-radius: 8px
+    padding: 18px 193px 17px 47px
+    min-width: 447px
+    min-height: 56px
+  &__button
+    position: absolute
+    top: 4.5px
+    right: 4.5px
+    border-radius: 4px
+    padding: 5px 21px
+    min-width: 178px
+    min-height: 48px
+#newsletter_email-error
+  &.invalid
+    position: absolute
+    left: 5px
+    top: -28px
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+
+// Responsive
+@media (max-width: 1300px)
+  .newsletter
+    &-wrapper
+      transform: translateX(0)
+@media (max-width: 1200px)
+  .newsletter
+    &-wrapper
+      max-width: 1000px
+@media (max-width: 1125px)
+  .newsletter
+    &-wrapper
+      max-width: 950px
+@media (max-width: 1050px)
+  .newsletter
+    background-size: 1440px 420px
+    padding: 67px 0 80px 0
+    &-wrapper
+      flex-direction: column
+      justify-content: flex-start
+    &__title
+      text-align: center
+    &__text
+      text-align: center
+      margin-bottom: 56px
+  .subscribe
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    margin-top: 0
+    &__input
+      padding: 17px 193px 18px 47px
+    &__button
+      top: 4px
+  #newsletter_email-error
+    &.invalid
+      left: 50%
+      top: -28px
+      margin-right: -50%
+      transform: translateX(-50%)
+@media (max-width: 992px)
+  .newsletter
+    background-size: 1300px 420px
+@media (max-width: 768px)
+  .newsletter
+    background-size: 1100px 420px
+    &-wrapper
+      padding-right: 1px
+    &__appeal
+      padding-right: 2px
+    &__title
+      margin-right: -2px
+    &__text
+      &-mod-01
+        margin-left: -9px
+  #newsletter_email-error
+    &.invalid
+      top: -26px
+      font-size: 13px
+      line-height: 17px
+@media (max-width: 767px)
+  .newsletter
+    &-wrapper
+      padding-right: 0
+    &__appeal
+      padding-right: 0
+    &__title
+      font-size: 40px
+      line-height: 50px
+      margin-right: 0
+    &__text
+      font-size: 17px
+      line-height: 33px
+      margin-bottom: 46px
+      &-mod-01
+        margin-left: 0
+@media (max-width: 576px)
+  .newsletter
+    background-size: 1000px 420px
+    padding: 61px 0 64px 0
+    &__title
+      font-size: 28px
+      line-height: 36px
+      margin-bottom: 27px
+    &__text
+      color: #FAFAFB
+      font-size: 16px
+      line-height: 28px
+      margin-bottom: 36px
+      max-width: 280px
+      &-mod-01, &-mod-03
+        display: inline
+  .subscribe
+    width: 285px
+    &__input
+      background-position: 19px 18px
+      padding: 12px 13px 12px 47px
+      margin-bottom: 10px
+      min-width: 280px
+      min-height: 48px
+      height: 48px
+    &__button
+      position: relative
+      top: 0
+      left: 0
+      border-radius: 8px
+      min-width: 280px
+      min-height: 48px
+  #newsletter_email-error
+    &.invalid
+      top: -23px
+      font-size: 12px
+      line-height: 15px
+@media (max-width: 320px)
+  .newsletter
+    &__text
+      &-mod-02
+        display: inline-block
+        width: 0.2px

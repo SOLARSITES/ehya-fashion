@@ -770,7 +770,39 @@
       </div>
       <!-- /.container .stories__container -->
     </section>
+    <section class="newsletter">
+      <div class="newsletter-wrapper">
+        <div class="newsletter__appeal">
+          <h2 class="newsletter__title">Подпишитесь</h2>
+          <p class="newsletter__text">
+            <span class="newsletter__text-mod-01">
+              Напишите свой адрес электронной почты.
+            </span>
+            <span class="newsletter__text-mod-02"></span>
+            <span class="newsletter__text-mod-03">
+              Мы будем присылать вам новости из мира моды.
+            </span>
+          </p>
+        </div>
+        <!-- /.newsletter__appeal -->
+        <form action="send.php" method="POST" class="form subscribe">
+          <div class="subscribe__validation">
+            <input
+              type="email"
+              class="input subscribe__input"
+              placeholder="Ваш Emaill"
+              name="newsletter_email"
+              required
+            />
+          </div>
+          <!-- /.subscribe__validation -->
+          <button class="button subscribe__button">Подписаться</button>
+        </form>
+      </div>
+      <!-- /.newsletter-wrapper -->
+    </section>
 
+    <div style="background-color: #e9e9e9; height: 300px; margin-top: 80px" class=""></div>
     <div id="contact-modal" class="modal">
       <div class="navbar-overlay"></div>
       <!-- /.navbar-overlay -->
