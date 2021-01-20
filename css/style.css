@@ -2117,7 +2117,6 @@ template {
   background-color: transparent;
   border: none;
   margin-right: 22px;
-  cursor: pointer;
 }
 
 .stories__button:last-child {
@@ -2143,22 +2142,32 @@ template {
   background-repeat: no-repeat;
   background-position: center center;
   transition: all .5s ease;
+  cursor: pointer;
 }
 
 .stories__button--next {
   width: 56px;
   height: 56px;
-  background-image: url(../img/slides/stories-button-next-active.svg);
+  background-image: url(../img/slides/stories-button-next.svg);
   background-repeat: no-repeat;
   background-position: center center;
   transition: all .5s ease;
 }
 
-.stories__button--next-active {
-  background-image: url(../img/slides/stories-button-next.svg);
+.stories__button--next-initial {
+  background-image: url(../img/slides/stories-button-next-active.svg);
   background-repeat: no-repeat;
   background-position: center center;
   transition: all .5s ease;
+  cursor: pointer;
+}
+
+.stories__button--next-active {
+  background-image: url(../img/slides/stories-button-next-active.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all .5s ease;
+  cursor: pointer;
 }
 
 .stories-slider {
@@ -2473,10 +2482,13 @@ template {
   .stories__button--next {
     width: 48px;
     height: 48px;
+    background-image: url(../img/slides/stories-button-next-mobile.svg);
+  }
+  .stories__button--next-initial {
     background-image: url(../img/slides/stories-button-next-active-mobile.svg);
   }
   .stories__button--next-active {
-    background-image: url(../img/slides/stories-button-next-mobile.svg);
+    background-image: url(../img/slides/stories-button-next-active-mobile.svg);
   }
   .stories-slider {
     max-width: 315px;
@@ -2788,6 +2800,347 @@ template {
   .newsletter__text-mod-02 {
     display: inline-block;
     width: 0.2px;
+  }
+}
+
+.footer__container {
+  padding: 128px 0 132px 0;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.footer__identity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 263px;
+  margin-right: 29px;
+}
+
+.footer__logo {
+  margin-bottom: 25px;
+}
+
+.footer__description {
+  color: #5A7184;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer__social-link {
+  margin-right: 6px;
+}
+
+.footer__social-link:last-child {
+  margin-right: 0;
+}
+
+.footer__social-twitter {
+  margin-right: 7px;
+}
+
+.footer__social-instagram {
+  margin-right: 8px;
+}
+
+.footer__unit-benefits, .footer__unit-about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer__unit-benefits {
+  margin-right: 30px;
+}
+
+.footer__list {
+  margin-right: 30px;
+  width: 165px;
+}
+
+.footer__list:last-child {
+  margin-right: 0;
+}
+
+.footer__contacts {
+  width: 130px;
+}
+
+.footer__title {
+  color: #183B56;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 0;
+  margin-bottom: 31px;
+}
+
+.footer__ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer__item {
+  margin-bottom: 24px;
+}
+
+.footer__item:last-child {
+  margin-bottom: 0;
+}
+
+.footer__link {
+  color: #183B56;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+}
+
+.logo__image {
+  width: 90px;
+  object-fit: cover;
+}
+
+@media (max-width: 1300px) {
+  .footer-wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1125px) {
+  .footer__container {
+    max-width: 950px;
+  }
+  .footer-wrapper {
+    justify-content: space-between;
+  }
+  .footer__identity {
+    margin-right: 0;
+  }
+  .footer__unit-benefits {
+    margin: 0 0 60px auto;
+    max-width: 500px;
+    width: 60%;
+  }
+  .footer__unit-about {
+    margin-left: auto;
+    max-width: 500px;
+    width: 60%;
+  }
+  .footer__navigation {
+    margin-right: auto;
+  }
+  .footer__company {
+    margin-right: auto;
+  }
+  .footer__contacts {
+    width: 165px;
+  }
+}
+
+@media (max-width: 1075px) {
+  .footer__container {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .footer__container {
+    max-width: 800px;
+  }
+  .footer__unit-benefits {
+    max-width: 425px;
+  }
+  .footer__unit-about {
+    max-width: 425px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer__container {
+    padding: 96px 0 132px 0;
+    max-width: 700px;
+  }
+  .footer__unit-benefits {
+    margin: 0 0 54px auto;
+    max-width: 385px;
+  }
+  .footer__unit-about {
+    max-width: 385px;
+  }
+}
+
+@media (max-width: 880px) {
+  .footer__container {
+    max-width: 680px;
+  }
+  .footer__unit-benefits {
+    max-width: 375px;
+  }
+  .footer__unit-about {
+    max-width: 375px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    padding: 64px 0 132px 0;
+    max-width: 641px;
+  }
+  .footer-wrapper {
+    transform: translateX(-6px);
+  }
+  .footer__logo {
+    margin-bottom: 24px;
+  }
+  .footer__description {
+    margin-bottom: 30px;
+  }
+  .footer__unit-benefits {
+    margin: 0 0 48px auto;
+    max-width: 358px;
+  }
+  .footer__unit-about {
+    max-width: 358px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__container {
+    padding: 64px 0 132px 0;
+    max-width: 590px;
+  }
+  .footer-wrapper {
+    transform: translateX(0);
+  }
+  .footer__identity {
+    max-width: 200px;
+  }
+  .footer__unit-benefits {
+    margin: 0 0 40px auto;
+    max-width: 350px;
+  }
+  .footer__unit-about {
+    max-width: 350px;
+  }
+  .footer__services, .footer__contacts {
+    width: 157px;
+  }
+  .footer__item {
+    margin-bottom: 19px;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer__container {
+    padding: 64px 0 80px 0;
+    max-width: 590px;
+  }
+  .footer-wrapper {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .footer__identity {
+    order: 1;
+    align-items: center;
+    max-width: 263px;
+  }
+  .footer__description {
+    text-align: center;
+  }
+  .footer__unit-benefits {
+    transform: translateX(12px);
+    margin: 0 0 40px 0;
+    max-width: 420px;
+    width: 75%;
+  }
+  .footer__unit-about {
+    transform: translateX(12px);
+    margin: 0 0 50px 0;
+    max-width: 420px;
+    width: 75%;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer__container {
+    padding: 48px 0 73px 0;
+    max-width: 100%;
+  }
+  .footer__logo {
+    margin-left: 9px;
+    margin-bottom: 10px;
+  }
+  .footer__description {
+    font-size: 14px;
+    line-height: 24px;
+    padding-right: 1px;
+    margin-bottom: 22px;
+    max-width: 230px;
+  }
+  .footer__social {
+    margin-left: 8px;
+  }
+  .footer__unit-benefits, .footer__unit-about {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(19px);
+    max-width: auto;
+    width: auto;
+  }
+  .footer__unit-benefits {
+    margin-bottom: 30px;
+  }
+  .footer__unit-about {
+    margin-bottom: 65px;
+  }
+  .footer__navigation, .footer__company {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .footer__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  .footer__item {
+    margin-bottom: 15px;
+  }
+  .footer__link {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer__description-mod-01 {
+    margin-left: -4px;
+  }
+  .footer__unit-benefits, .footer__unit-about {
+    transform: translateX(-44px);
   }
 }
 
@@ -3167,18 +3520,16 @@ template {
   .stories__button:hover {
     background-color: transparent;
   }
-  .stories__button--prev:hover {
+  .stories__button--prev-active:hover {
     background-image: url(../img/slides/stories-button-prev-hover.svg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
     transition: all .5s ease;
   }
-  .stories__button--next:hover {
+  .stories__button--next-active:hover, .stories__button--next-initial:hover {
     background-image: url(../img/slides/stories-button-next-hover.svg);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
     transition: all .5s ease;
   }
   .subscribe__button:hover {

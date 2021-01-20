@@ -1,0 +1,252 @@
+.footer
+  &__container
+    padding: 128px 0 132px 0
+  &-wrapper
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: flex-start
+  &__identity
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    max-width: 263px
+    margin-right: 29px
+  &__logo
+    margin-bottom: 25px
+  &__description
+    color: $secondary
+    font-weight: 400
+    font-size: 16px
+    line-height: 28px
+    margin-top: 0
+    margin-bottom: 29px
+  &__social
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    &-link
+      margin-right: 6px
+      &:last-child
+        margin-right: 0
+    &-twitter
+      margin-right: 7px
+    &-instagram
+      margin-right: 8px
+  &__unit
+    &-benefits, &-about
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+    &-benefits
+      margin-right: 30px
+  &__list
+    margin-right: 30px
+    width: 165px
+    &:last-child
+      margin-right: 0
+  &__contacts
+    width: 130px
+  &__title
+    color: $primary
+    font-weight: 700
+    font-size: 18px
+    line-height: 25px
+    margin-top: 0
+    margin-bottom: 31px
+  &__ul
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    margin: 0
+    padding: 0
+    list-style-type: none
+  &__item
+    margin-bottom: 24px
+    &:last-child
+      margin-bottom: 0
+  &__link
+    color: $primary
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    text-decoration: none
+.logo
+  &__image
+    width: 90px
+    object-fit: cover
+
+// Responsive
+@media (max-width: 1300px)
+  .footer
+    &-wrapper
+      justify-content: center
+@media (max-width: 1125px)
+  .footer
+    &__container
+      max-width: 950px
+    &-wrapper
+      justify-content: space-between
+    &__identity
+      margin-right: 0
+    &__unit
+      &-benefits
+        margin: 0 0 60px auto
+        max-width: 500px
+        width: 60%
+      &-about
+        margin-left: auto
+        max-width: 500px
+        width: 60%
+    &__navigation
+      margin-right: auto
+    &__company
+      margin-right: auto
+    &__contacts
+      width: 165px
+@media (max-width: 1075px)
+  .footer
+    &__container
+      max-width: 900px
+@media (max-width: 1050px)
+  .footer
+    &__container
+      max-width: 800px
+    &__unit
+      &-benefits
+        max-width: 425px
+      &-about
+        max-width: 425px
+@media (max-width: 992px)
+  .footer
+    &__container
+      padding: 96px 0 132px 0
+      max-width: 700px
+    &__unit
+      &-benefits
+        margin: 0 0 54px auto
+        max-width: 385px
+      &-about
+        max-width: 385px
+@media (max-width: 880px)
+  .footer
+    &__container
+      max-width: 680px
+    &__unit
+      &-benefits
+        max-width: 375px
+      &-about
+        max-width: 375px
+@media (max-width: 768px)
+  .footer
+    &__container
+      padding: 64px 0 132px 0
+      max-width: 641px
+    &-wrapper
+      transform: translateX(-6px)
+    &__logo
+      margin-bottom: 24px
+    &__description
+      margin-bottom: 30px
+    &__unit
+      &-benefits
+        margin: 0 0 48px auto
+        max-width: 358px
+      &-about
+        max-width: 358px
+@media (max-width: 767px)
+  .footer
+    &__container
+      padding: 64px 0 132px 0
+      max-width: 590px
+    &-wrapper
+      transform: translateX(0)
+    &__identity
+      max-width: 200px
+    &__unit
+      &-benefits
+        margin: 0 0 40px auto
+        max-width: 350px
+      &-about
+        max-width: 350px
+    &__services, &__contacts
+      width: 157px
+    &__item
+      margin-bottom: 19px
+@media (max-width: 700px)
+  .footer
+    &__container
+      padding: 64px 0 80px 0
+      max-width: 590px
+    &-wrapper
+      flex-wrap: nowrap
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+    &__identity
+      order: 1
+      align-items: center
+      max-width: 263px
+    &__description
+      text-align: center
+    &__unit
+      &-benefits
+        transform: translateX(12px)
+        margin: 0 0 40px 0
+        max-width: 420px
+        width: 75%
+      &-about
+        transform: translateX(12px)
+        margin: 0 0 50px 0
+        max-width: 420px
+        width: 75%
+@media (max-width: 576px)
+  .footer
+    &__container
+      padding: 48px 0 73px 0
+      max-width: 100%
+    &__logo
+      margin-left: 9px
+      margin-bottom: 10px
+    &__description
+      font-size: 14px
+      line-height: 24px
+      padding-right: 1px
+      margin-bottom: 22px
+      max-width: 230px
+    &__social
+      margin-left: 8px
+    &__unit
+      &-benefits, &-about
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        transform: translateX(19px)
+        max-width: auto
+        width: auto
+      &-benefits
+        margin-bottom: 30px
+      &-about
+        margin-bottom: 65px
+    &__navigation, &__company
+      margin-right: 0
+      margin-bottom: 30px
+    &__title
+      font-size: 16px
+      line-height: 22px
+      margin-bottom: 20px
+    &__item
+      margin-bottom: 15px
+    &__link
+      font-size: 14px
+      line-height: 20px
+@media (max-width: 320px)
+  .footer
+    &__description
+      &-mod-01
+        margin-left: -4px
+    &__unit
+      &-benefits, &-about
+        transform: translateX(-44px)

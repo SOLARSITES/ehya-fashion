@@ -108,9 +108,9 @@ $(document).ready(function () {
           this.autoplay.stop();
         });
 
-        // this.el.addEventListener("mouseleave", () => {
-        //   this.autoplay.start();
-        // });
+        this.el.addEventListener("mouseleave", () => {
+          this.autoplay.start();
+        });
       },
     },
 
@@ -139,24 +139,24 @@ $(document).ready(function () {
   });
 
   var storiesSlider = new Swiper(".stories-slider", {
-    on: {
-      init() {
-        this.el.addEventListener("mouseenter", () => {
-          this.autoplay.stop();
-        });
+    // on: {
+    //   init() {
+    //     this.el.addEventListener("mouseenter", () => {
+    //       this.autoplay.stop();
+    //     });
 
-        // this.el.addEventListener("mouseleave", () => {
-        //   this.autoplay.start();
-        // });
-      },
-    },
+    //     this.el.addEventListener("mouseleave", () => {
+    //       this.autoplay.start();
+    //     });
+    //   },
+    // },
 
     // autoplay: {
     //   delay: 7000,
     //   disableOnInteraction: false,
     // },
 
-    loop: true,
+    // loop: true,
 
     navigation: {
       prevEl: ".stories__button--prev",
@@ -171,24 +171,25 @@ $(document).ready(function () {
     speed: 750,
   });
 
-  var sliderButtonPrev = document.querySelector(".stories__button--prev");
-  sliderButtonPrev.addEventListener("click", function () {
+  storiesSlider.on("reachBeginning", function () {
     document
       .querySelector(".stories__button--prev")
-      .classList.toggle("stories__button--prev-active");
+      .classList.remove("stories__button--prev-active");
     document
       .querySelector(".stories__button--next")
-      .classList.toggle("stories__button--next-active");
+      .classList.add("stories__button--next-active");
   });
 
-  var sliderButtonNext = document.querySelector(".stories__button--next");
-  sliderButtonNext.addEventListener("click", function () {
+  storiesSlider.on("reachEnd", function () {
     document
       .querySelector(".stories__button--next")
-      .classList.toggle("stories__button--next-active");
+      .classList.remove("stories__button--next-initial");
+    document
+      .querySelector(".stories__button--next")
+      .classList.remove("stories__button--next-active");
     document
       .querySelector(".stories__button--prev")
-      .classList.toggle("stories__button--prev-active");
+      .classList.add("stories__button--prev-active");
   });
 
   $.preloadImages = function () {

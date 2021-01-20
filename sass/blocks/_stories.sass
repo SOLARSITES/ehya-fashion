@@ -55,7 +55,6 @@
     background-color: transparent
     border: none
     margin-right: 22px
-    cursor: pointer
     &:last-child
       margin-right: 0
     &:active, &:hover, &:focus
@@ -73,18 +72,26 @@
         background-repeat: no-repeat
         background-position: center center
         transition: all .5s ease
+        cursor: pointer
     &--next
       width: 56px
       height: 56px
-      background-image: url(../img/slides/stories-button-next-active.svg)
+      background-image: url(../img/slides/stories-button-next.svg)
       background-repeat: no-repeat
       background-position: center center
       transition: all .5s ease
-      &-active
-        background-image: url(../img/slides/stories-button-next.svg)
+      &-initial
+        background-image: url(../img/slides/stories-button-next-active.svg)
         background-repeat: no-repeat
         background-position: center center
         transition: all .5s ease
+        cursor: pointer
+      &-active
+        background-image: url(../img/slides/stories-button-next-active.svg)
+        background-repeat: no-repeat
+        background-position: center center
+        transition: all .5s ease
+        cursor: pointer
   &-slider
     margin: 0 0 0 auto
     max-width: 662px
@@ -320,9 +327,11 @@
       &--next
         width: 48px
         height: 48px
-        background-image: url(../img/slides/stories-button-next-active-mobile.svg)
+        background-image: url(../img/slides/stories-button-next-mobile.svg)
+        &-initial
+          background-image: url(../img/slides/stories-button-next-active-mobile.svg)
         &-active
-          background-image: url(../img/slides/stories-button-next-mobile.svg)
+          background-image: url(../img/slides/stories-button-next-active-mobile.svg)
     &-slider
       max-width: 315px
       &__item
