@@ -27,80 +27,6 @@ $(document).ready(function () {
     $(this).addClass("trends-menu__item--active");
   });
 
-  var modalButton = $("[data-toggle=modal]");
-  var closeModalButton = $(".modal__close");
-  modalButton.on("click", openModal);
-  closeModalButton.on("click", closeModal);
-
-  function openModal() {
-    var targetModal = $(this).attr("data-href");
-    $(targetModal).find(".modal__overlay").addClass("modal__overlay--visible");
-    $(targetModal).find(".modal__dialog").addClass("modal__dialog--visible");
-    $(".menu-button").removeClass("menu-button--close");
-    $(".navbar-group").removeClass("navbar-group--visible");
-    $(".navbar-overlay").removeClass("navbar-overlay--visible");
-    $(this).attr("navbar__button", true);
-    $(".modal__close").focus();
-  }
-
-  function closeModal(event) {
-    event.preventDefault();
-    var modalOverlay = $(".modal__overlay");
-    var modalDialog = $(".modal__dialog");
-    modalOverlay.removeClass("modal__overlay--visible");
-    modalDialog.removeClass("modal__dialog--visible");
-    $("[navbar__button]").focus();
-  }
-
-  $(document).mousedown(function (e) {
-    if (
-      !$(".modal__close,.modal__dialog").is(e.target) &&
-      $(".modal__dialog").has(e.target).length === 0
-    ) {
-      $(".modal__overlay").removeClass("modal__overlay--visible");
-      $(".modal__dialog").removeClass("modal__dialog--visible");
-    }
-  });
-
-  $(window).keyup(function (e) {
-    if (e.keyCode == 27) {
-      closeModal(e);
-    }
-  });
-
-  //Валидация форм
-  $(".form").each(function () {
-    $(this).validate({
-      errorClass: "invalid",
-      rules: {
-        phone: {
-          required: true,
-          minlength: 18,
-        },
-      },
-      messages: {
-        name: {
-          required: "Пожалуйста, укажите Ваше полное имя!",
-          minlength: "Имя должно содержать не менее 2-х букв!",
-        },
-        phone: {
-          required: "Пожалуйста, укажите Ваш телефон!",
-          minlength: "Укажите телефон в формате +7 (xxx) xxx-xx-xx",
-        },
-        email: {
-          required: "Пожалуйста, укажите Ваш E-mail!",
-          email: "E-mail должен быть в формате name@domain.com",
-        },
-        newsletter_email: {
-          required: "Пожалуйста, укажите Ваш E-mail!",
-          email: "Укажите E-mail в формате name@domain.com",
-        },
-      },
-    });
-  });
-
-  $(`[type="tel"]`).mask("+7 (000) 000-00-00");
-
   var reviewsSlider = new Swiper(".reviews-slider", {
     on: {
       init() {
@@ -209,4 +135,78 @@ $(document).ready(function () {
     "img/slides/stories-button-next-mobile.svg",
     "img/slides/stories-button-next-active-mobile.svg"
   );
+
+  var modalButton = $("[data-toggle=modal]");
+  var closeModalButton = $(".modal__close");
+  modalButton.on("click", openModal);
+  closeModalButton.on("click", closeModal);
+
+  function openModal() {
+    var targetModal = $(this).attr("data-href");
+    $(targetModal).find(".modal__overlay").addClass("modal__overlay--visible");
+    $(targetModal).find(".modal__dialog").addClass("modal__dialog--visible");
+    $(".menu-button").removeClass("menu-button--close");
+    $(".navbar-group").removeClass("navbar-group--visible");
+    $(".navbar-overlay").removeClass("navbar-overlay--visible");
+    $(this).attr("navbar__button", true);
+    $(".modal__close").focus();
+  }
+
+  function closeModal(event) {
+    event.preventDefault();
+    var modalOverlay = $(".modal__overlay");
+    var modalDialog = $(".modal__dialog");
+    modalOverlay.removeClass("modal__overlay--visible");
+    modalDialog.removeClass("modal__dialog--visible");
+    $("[navbar__button]").focus();
+  }
+
+  $(document).mousedown(function (e) {
+    if (
+      !$(".modal__close,.modal__dialog").is(e.target) &&
+      $(".modal__dialog").has(e.target).length === 0
+    ) {
+      $(".modal__overlay").removeClass("modal__overlay--visible");
+      $(".modal__dialog").removeClass("modal__dialog--visible");
+    }
+  });
+
+  $(window).keyup(function (e) {
+    if (e.keyCode == 27) {
+      closeModal(e);
+    }
+  });
+
+  //Валидация форм
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      rules: {
+        phone: {
+          required: true,
+          minlength: 18,
+        },
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста, укажите Ваше полное имя!",
+          minlength: "Имя должно содержать не менее 2-х букв!",
+        },
+        phone: {
+          required: "Пожалуйста, укажите Ваш телефон!",
+          minlength: "Укажите телефон в формате +7 (xxx) xxx-xx-xx",
+        },
+        email: {
+          required: "Пожалуйста, укажите Ваш E-mail!",
+          email: "E-mail должен быть в формате name@domain.com",
+        },
+        newsletter_email: {
+          required: "Пожалуйста, укажите Ваш E-mail!",
+          email: "Укажите E-mail в формате name@domain.com",
+        },
+      },
+    });
+  });
+
+  $(`[type="tel"]`).mask("+7 (000) 000-00-00");
 });

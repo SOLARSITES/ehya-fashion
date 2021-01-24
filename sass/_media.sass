@@ -67,3 +67,25 @@
         background-color: #56758D
         text-decoration: none
         border: 3px solid #122D41
+  .footer
+    &__icon
+      &-google, &-twitter, &-instagram, &-linkedin
+        &:hover
+          fill: #1565D8
+          transition: all 0.5s ease
+@media (min-width: 768px)
+  .to-top
+    position: fixed
+    right: 15px
+    bottom: 15px
+    z-index: 99
+    &__link
+      display: block
+      width: 38px
+      height: 38px
+    &__image
+      width: 38px
+      height: 38px
+@media (max-width: 767px)
+  .to-top
+    display: none

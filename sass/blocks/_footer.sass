@@ -34,6 +34,15 @@
       margin-right: 7px
     &-instagram
       margin-right: 8px
+  &__icon
+    &-google, &-twitter
+      fill: #5A7184
+      width: 42px
+      height: 40px
+    &-instagram, &-linkedin
+      fill: #5A7184
+      width: 40px
+      height: 40px
   &__unit
     &-benefits, &-about
       display: flex
@@ -67,6 +76,8 @@
     margin-bottom: 24px
     &:last-child
       margin-bottom: 0
+    &-mod-02
+      display: none
   &__link
     color: $primary
     font-weight: 400
@@ -216,16 +227,10 @@
       padding-right: 1px
       margin-bottom: 22px
       max-width: 230px
-    &__social
-      margin-left: 8px
     &__unit
       &-benefits, &-about
-        flex-direction: column
-        align-items: flex-start
-        justify-content: flex-start
+        max-width: 320px
         transform: translateX(19px)
-        max-width: auto
-        width: auto
       &-benefits
         margin-bottom: 30px
       &-about
@@ -242,11 +247,28 @@
     &__link
       font-size: 14px
       line-height: 20px
+@media (max-width: 480px)
+  .footer
+    &__unit
+      &-benefits, &-about
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        transform: translateX(19px)
+        max-width: auto
+        width: auto
 @media (max-width: 320px)
   .footer
     &__description
       &-mod-01
         margin-left: -4px
+    &__social
+      margin-left: 8px
     &__unit
       &-benefits, &-about
         transform: translateX(-44px)
+    &__item
+      &-mod-01
+        display: none
+      &-mod-02
+        display: inline
